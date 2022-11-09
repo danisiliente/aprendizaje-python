@@ -3,13 +3,16 @@
 
 import random
 
-tamaño = random.randint(10,25)
+'''tamaño = random.randint(10,25)
 
 lista = []
 
 for i in range(tamaño):
     lista.insert(i,round(random.random()*100))
-print(lista," Tamaño: ",i + 1)
+print(lista," Tamaño: ",i + 1)'''
+
+lista = [round(random.random()*100) for i in range(random.randint(10,25))] #Código más corto - eficiente
+print(lista,' tamaño:', len(lista))
 
 suma = 0
 promedio = 0

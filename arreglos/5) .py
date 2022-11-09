@@ -4,13 +4,16 @@
 
 import random
 
-tamaño = random.randint(10,25)
+'''tamaño = random.randint(10,25)
 
 lista = []
 
 for i in range(tamaño):
     lista.insert(i,round(random.random()*100))
-print("Lista: ",lista)
+print("Lista: ",lista)'''
+
+lista = [round(random.random()*100) for i in range(random.randint(10,25))] #Código más corto - eficiente
+print('Lista:',lista)
 
 numero = int(input("Ingrese un número para buscar en la lista: "))
 
