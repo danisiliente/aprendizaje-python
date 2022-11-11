@@ -4,9 +4,11 @@ def conversion(n):
     f = (n*(9/5))+32
     k = (n+273.15)
     r = (n*(9/5))+491.67
-    print(n,'Grados celsius equivalen a:\n''Farenheit:',f,'Kelvin:',k,'Rankine:',r)
-    
-conversion(5)
+    print(n,'Grados celsius equivalen a:\n''Farenheit:',f,'\nKelvin:',k,'\nRankine:',r)
+
+numero = int(input('Ingrese un número: '))
+
+conversion(numero)
     
 '''c=int(input("digite cnatidad de grados celsius"))
 f=(c*(9/5))+32
