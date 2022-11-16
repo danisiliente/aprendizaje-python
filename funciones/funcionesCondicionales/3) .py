@@ -3,10 +3,9 @@
 
 def cifras(n):
     if n < 0 or n > 9999:
-        return('El número está por fuera de los parámetros')
+        print("El número está por fuera de los parámetros")
     else:
-        return(len(n))
+        print("Su número tiene",len(str(n)),"cifras.")
     
-numero = int(input('Digite un número entre 0 y 9.999: '))
-print(cifras(numero))
-    
+numero = int(input("Digite un número entre 0 y 9.999: "))
+cifras(numero)

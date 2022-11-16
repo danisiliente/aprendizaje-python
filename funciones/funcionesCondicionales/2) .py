@@ -4,9 +4,9 @@
 
 def costo(m):
     if m <= 3:
-        return m * 200
+        print('costo: $', m * 200) 
     else:
-        return m * 250 - 150
+        print('costo: $',m * 250 - 150)
     
 minutos = int(input('Ingrese los minutos de la llamada: '))
-print('costo: ',costo(minutos))
+costo(minutos)

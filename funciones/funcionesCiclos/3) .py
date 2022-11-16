@@ -10,6 +10,6 @@ def figura(n):
     for i in range(n):
         print("*" * (i + 1))
     
-numero = int(input('Ingrese un número: '))
+numero = int(input('Ingrese la cantidad de filas de la figura: '))
 
 print(figura(numero))
