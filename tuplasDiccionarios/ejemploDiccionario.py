@@ -6,3 +6,6 @@ del pc['ram']
 print(pc)
 for objeto, valor in pc.items():
     print('en la pc tenemos',objeto,valor)
+
+pc['board'] = 'Asus b520'
+print(pc)
