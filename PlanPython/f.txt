@@ -1,0 +1,13 @@
+Deseamos gestionar una biblioteca. La biblioteca contiene libros que los socios pueden tomar prestados
+un número de días. De cada libro nos interesa, al menos, su título, autor y año de edición. De cada socio
+mantenemos su DNI, su nombre y su teléfono. Un socio puede tomar prestados tres libros. Si un libro tarda
+más de 10 dáas en ser devuelto, el socio no podrá sacar nuevos libros durante un periodo de tiempo: 
+tres dias de penalización por cada dia de retraso.
+
+Diseña un programa que permita dar de alta y baja libros y socios y llevar control de los prestamos
+y devoluciones de los libros. Cuando un socio sea penalizado, el programa indicará por pantalla
+hasta qué fecha está penalizado e impedirá que efectúe nuevos prestamos hasta entonces
+
+https://elibro-net.bdigital.sena.edu.co/es/ereader/senavirtual/51760?page=376
+
+pag 376
