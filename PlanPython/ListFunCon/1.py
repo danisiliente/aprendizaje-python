@@ -12,8 +12,11 @@ long = int(input('Tamaño de la lista: '))
 while len(lista) < long:
     llenar(lista)
 
-for i in range(len(lista)):
-    if lista[i] < 0:
-        lista[i] = 0
+def solucion(l):
+    for i in range(len(l)):
+        if l[i] < 0:
+            l[i] = 0
+    return l
 
 print(lista)
+print(solucion(lista))
