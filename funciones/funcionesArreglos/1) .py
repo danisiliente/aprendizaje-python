@@ -1,12 +1,21 @@
 #Llenar una lista de tamaño aleatorio entre 10 y 25 elementos. Llene la lista con números 
-#aleatorios. Solicite al usuario un número para buscar en la lista. Diga cuantas veces está y en que 
-#posiciones esta. Si no está agréguelo al final de la lista.
+#aleatorios. Muestre cuales y cuantos son primos
 
 import random
 
-def ramdonlist(lis):
-    lis = [round(random.random()*100) for i in range(random.randint(10,25))] #Comprensión
-    print(lis,' tamaño:', len(lis))
+lista = [round(random.random()*100) for i in range(random.randint(10,25))] #Código más corto - eficiente
+print(lista,' tamaño:', len(lista))
 
-lista = []
-ramdonlist(lista)
+def primos(l):
+    for i in range(len(lista)):
+        divisores = 0
+        for j in range(1,101):
+            if lista[i] % j == 0:
+                divisores += 1
+        if divisores == 2:
+            l.append(lista[i])
+    print("Hay",len(l),"números primos","\nSon los siguientes: ",l)
+
+listaPrimos = []
+
+primos(listaPrimos)
