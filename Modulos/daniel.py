@@ -1,35 +1,105 @@
-# Módulo de prueba para Listas
+# Ingresar una palabra en minúscula y que esta se encripte con el cifrado Cesar.
 
-import random
+alfabeto = 'abcdefghijklmnñopqrstuvwxyz'
 
-def listaAleatoria(l):
-    tamaño = int(input('Tamaño de la lista: '))
-    for i in range(tamaño):
-        l.append(random.randint(1,100))
-    return l
+# Cifrador de 3.
 
-def paresEnLista(l):
-    pares = []
-    for i in l:
-        if i % 2 == 0:
-            pares.append(i)
-    return pares
+def cifrar(t):
 
-def imparesEnLista(l):
-    impares = []
-    for i in l:
-        if i % 2 != 0:
-            impares.append(i)
-    return impares
+    t = t.lower()
 
-def sumarTodoLista(l):
-    suma=0
-    for elemento in l:
-        suma += elemento
-    return suma
+    letraCifrada = ''
 
-def elevarTodoLista(l):
-    cuadrados = []
-    for elemento in l:
-        cuadrados.append(elemento**2)
-    return cuadrados
+    for letra in t:
+        if letra in alfabeto:
+            posicion = alfabeto.find(letra) # el método find encuentra el índice de cada letra
+            posicion += 3
+            if posicion >= 26:
+                posicion -= 27
+            letraCifrada += alfabeto[posicion]
+        else:
+            letraCifrada += letra
+
+    print('Texto cifrado --> ',letraCifrada)
+
+# Descifrador de 3.
+
+def descifrar(t):
+
+    t = t.lower()
+
+    letraDescifrada = ''
+
+    for letra in t:
+        if letra in alfabeto:
+            posicion = alfabeto.find(letra)
+            posicion -= 3
+            if posicion < 0:
+                posicion += 27
+            letraDescifrada += alfabeto[posicion]
+        else:
+            letraDescifrada += letra
+
+    print(letraDescifrada)
+
+# Abecedario Cesar (3).
+
+def abecedario1():
+
+    for letra in alfabeto:
+        posicion = alfabeto.find(letra)
+        posicion += 3
+        if posicion >= 26:
+            posicion -= 27
+        print(letra,' --> ',alfabeto[posicion])
+
+# Cifra con la diferencia de número que elija el usuario.
+
+def cifradoCompuesto(t,n):
+
+    t = t.lower()
+
+    letraCifrada = ''
+
+    for letra in t:
+        if letra in alfabeto:
+            posicion = alfabeto.find(letra)
+            posicion += n
+            if posicion >= 26:
+                posicion -= 27
+            letraCifrada += alfabeto[posicion]
+        else:
+            letraCifrada += letra
+
+    print('Texto cifrado --> ',letraCifrada)
+
+# Descifra con la diferencia de número que elija el usuario.
+
+def descifradoCompuesto(t,n):
+
+    t = t.lower()
+
+    letraDescifrada = ''
+
+    for letra in t:
+        if letra in alfabeto:
+            posicion = alfabeto.find(letra)
+            posicion -= n
+            if posicion < 0:
+                posicion += 27
+            letraDescifrada += alfabeto[posicion]
+        else:
+            letraDescifrada += letra
+
+    print(letraDescifrada)
+
+# Abecedario Cesar (número que elija el usuario).
+
+def abecedario2(n):
+
+    for letra in alfabeto:
+        posicion = alfabeto.find(letra)
+        posicion += n
+        if posicion >= 26:
+            posicion -= 27
+        print(letra,' --> ',alfabeto[posicion])

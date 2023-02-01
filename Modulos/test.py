@@ -1,23 +1,30 @@
 import daniel
 
-lista = []
+texto1 = input('Ingrese el texto que desea cifrar: ')
 
-# .listaAleatoria --> lista con números aleatorios de 1 a 100 (usted decide el tamaño de la lista)
+daniel.cifrar(texto1) # Cifra el texto con el método Cesar (3).
 
-print(daniel.listaAleatoria(lista))
+texto2 = input('Ingrese el texto que desea descifrar: ')
 
-# .paresEnLista --> devuelve los números pares de una lista
+daniel.descifrar(texto2) # Descifra el texto (método Cesar), se recomienda copiar y pegar el texto cifrado (3).
 
-print(daniel.paresEnLista(lista))
+var1 = input('¿Desea ver el abecedario Cesar? --> s/n: ')
+var1 = var1.lower()
 
-# .imparesEnLista --> devuelve los números impares de una lista
+if var1 == 's':
+    daniel.abecedario1() # Muestra el abecedario Cesar (3).
 
-print(daniel.imparesEnLista(lista))
+texto3 = input('Ingrese el texto que desea cifrar: ')
+numero = int(input('Ingrese el número de diferencia con el que desea encriptar: '))
 
-# .sumaTodoLista --> Suma todos los números de una lista
+daniel.cifradoCompuesto(texto3,numero) # Cifra el texto (método Cesar) con la diferencia numerica que dé el usuario.
 
-print(daniel.sumarTodoLista(lista))
+texto4 = input('Ingrese el texto que desea descifrar: ')
 
-# .elevarTodoLista --> Eleva al cuadrado todos los números de una lista
+daniel.descifradoCompuesto(texto4,numero) # Descifra el texto (método Cesar), se recomienda copiar y pegar el texto cifrado (n).
 
-print(daniel.elevarTodoLista(lista))
+var2 = input('¿Desea ver el abecedario Cesar utilizado? --> s/n: ')
+var2 = var2.lower()
+
+if var2 == 's':
+    daniel.abecedario2(numero) # Muestra el abecedario Cesar (n).
