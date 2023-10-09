@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block titulo %} Lista de Usuarios {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+      <a class="btn btn-success" href="{% url 'crear' %}">Agregar nuevo usuario</a>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">Usuarios</h4>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Contrasenha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Fabrizio di momorielle</td>
+            <td>Imagen.jpg</td>
+            <td>Creador del famoso libro "los fabrizios"</td>
+            <td>
+               <a class="btn btn-info" href="{% url 'editar' %}">Editar</a>
+               <a class="btn btn-info" href="{}">Borrar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+
+{% endblock %}
