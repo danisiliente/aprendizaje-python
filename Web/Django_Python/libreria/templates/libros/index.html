@@ -30,8 +30,8 @@
             <td>{{ usuario.correo }}</td>
             <td>{{ usuario.contrasenha }}</td>
             <td>
-               <a class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>
-               <a class="btn btn-danger" href="{}" role="button">Borrar</a>
+               <a class="btn btn-info" href="{% url 'editar' usuario.id %}" role="button">Editar</a>
+               <a class="btn btn-danger" href="{% url 'eliminar' usuario.id %}" role="button">Borrar</a>
             </td>
           </tr>
 
