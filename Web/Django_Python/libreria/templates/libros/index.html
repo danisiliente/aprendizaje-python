@@ -21,16 +21,22 @@
           </tr>
         </thead>
         <tbody>
+
+          {% for usuario in usuarios %}
+
           <tr>
-            <td>1</td>
-            <td>Fabrizio di momorielle</td>
-            <td>Imagen.jpg</td>
-            <td>Creador del famoso libro "los fabrizios"</td>
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.correo }}</td>
+            <td>{{ usuario.contrasenha }}</td>
             <td>
-               <a class="btn btn-info" href="{% url 'editar' %}">Editar</a>
-               <a class="btn btn-info" href="{}">Borrar</a>
+               <a class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>
+               <a class="btn btn-danger" href="{}" role="button">Borrar</a>
             </td>
           </tr>
+
+          {% endfor %}
+
         </tbody>
       </table>
 

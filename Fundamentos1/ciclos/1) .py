@@ -14,5 +14,3 @@ for i in range(1,numero,1):
         contador += 1
 
 print("el número ",numero," tiene ",contador," divisores.")
-
- 

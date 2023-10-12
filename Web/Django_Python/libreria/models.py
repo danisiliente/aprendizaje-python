@@ -8,3 +8,6 @@ class Usuario(models.Model):
     correo = models.CharField(max_length=100, verbose_name='Correo')
     contrasenha = models.CharField(max_length=100, verbose_name='Contrasenha')
     
+    def __str__(self):
+        fila = "Nombre: " + self.nombre + "Correo: " + self.correo + "Contrasenha: " + self.contrasenha
+        return fila
